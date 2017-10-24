@@ -11,3 +11,9 @@ body {
 	display: flex;
 	margin-top: 10px;
 }
+.code_box {
+	width 500px;
+	background-color: lightgray;
+	height 800px;
+	border: 2px solid black;
+	
