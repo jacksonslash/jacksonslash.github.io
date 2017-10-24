@@ -1,0 +1,13 @@
+body {
+	background-color: lightblue;
+}
+.Content {
+	background-color: white;
+	height: 1500px;
+	width: 1200px;
+	margin-left: 50px;
+	margin-right: 50px;
+	display: inline;
+	display: flex;
+	margin-top: 10px;
+}
