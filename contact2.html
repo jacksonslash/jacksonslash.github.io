@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>LearntoCode | Home</title> 
+     <link rel="shortcut icon" href="Website-Icon.png" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/marketing.css">
+        <!--<![endif]-->
+     
+    <!-- FORM: HEAD SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <style>
+                    .captcha {
+                        padding-bottom: 1em !important;
+                    }
+                    .wForm .captcha .oneField {
+                        margin: 0;
+                        padding: 0;
+                    }
+                </style>
+                <script type="text/javascript">
+                    var enableSubmitButton = function() {
+                        var submitButton = document.getElementById('submit_button');
+                        var explanation = document.getElementById('disabled-explanation');
+                        if (submitButton != null) {
+                            submitButton.removeAttribute('disabled');
+                            if (explanation != null) {
+                                explanation.style.display = 'none';
+                            }
+                        }
+                    };
+                    var disableSubmitButton = function() {
+                        var submitButton = document.getElementById('submit_button');
+                        var explanation = document.getElementById('disabled-explanation');
+                        if (submitButton != null) {
+                            submitButton.disabled = true;
+                            if (explanation != null) {
+                                explanation.style.display = 'block';
+                            }
+                        }
+                    };
+                    var onloadCallback = function () {
+                        grecaptcha.render('g-recaptcha-render-div', {
+                            'sitekey': '6LeISQ8UAAAAAL-Qe-lDcy4OIElnii__H_cEGV0C',
+                            'theme': 'light',
+                            'size': 'normal',
+                            'callback': 'enableSubmitButton',
+                            'expired-callback': 'disableSubmitButton'
+                        });
+                        var oldRecaptchaCheck = parseInt('0');
+                        if (oldRecaptchaCheck === -1) {
+                            var standardCaptcha = document.getElementById("tfa_captcha_text");
+                            standardCaptcha = standardCaptcha.parentNode.parentNode.parentNode;
+                            standardCaptcha.parentNode.removeChild(standardCaptcha);
+                        }
+                        document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.style.display = "block";
+                        document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.removeAttribute("hidden");
+                        document.getElementById("g-recaptcha-render-div").getAttributeNode('id').value = 'tfa_captcha_text';
+ 
+                        var captchaError = '';
+                        if (captchaError == '1') {
+                            var errMsgText = 'The CAPTCHA was not completed successfully.';
+                            var errMsgDiv = document.createElement('div');
+                            errMsgDiv.id = "tfa_captcha_text-E";
+                            errMsgDiv.className = "err errMsg";
+                            errMsgDiv.innerText = errMsgText;
+                            var loc = document.querySelector('.g-captcha-error');
+                            loc.insertBefore(errMsgDiv, loc.childNodes[0]);
+ 
+                            /* See wFORMS.behaviors.paging.applyTo for origin of this code */
+                            if (wFORMS.instances['paging']) {
+                                var b = wFORMS.instances['paging'][0];
+                                var pp = base2.DOM.Element.querySelector(document, wFORMS.behaviors.paging.CAPTCHA_ERROR);
+                                if (pp) {
+                                    var lastPage = 1;
+                                    for (var i = 1; i < 100; i++) {
+                                        if (b.behavior.isLastPageIndex(i)) {
+                                            lastPage = i;
+                                            break;
+                                        }
+                                    }
+                                    b.jumpTo(lastPage);
+                                }
+                            }
+                        }
+                    };
+                </script>
+                <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async
+                        defer></script>
+                <script type="text/javascript">
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var warning = document.getElementById("javascript-warning");
+                        if (warning != null) {
+                            warning.parentNode.removeChild(warning);
+                        }
+                        var oldRecaptchaCheck = parseInt('0');
+                        if (oldRecaptchaCheck !== -1) {
+                            var explanation = document.getElementById('disabled-explanation');
+                            var submitButton = document.getElementById('submit_button');
+                            if (submitButton != null) {
+                                submitButton.disabled = true;
+                                if (explanation != null) {
+                                    explanation.style.display = 'block';
+                                }
+                            }
+                        }
+                    });
+                </script>
+                <link href="https://www.tfaforms.com/form-builder/4.4.0/css/wforms-layout.css?v=469-5" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+    <link href="https://www.tfaforms.com/form-builder/4.4.0/css/wforms-layout-ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="https://www.tfaforms.com/form-builder/4.4.0/css/wforms-layout-ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="https://www.tfaforms.com/form-builder/4.4.0/css/wforms-layout-ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+ 
+    <link href="https://www.tfaforms.com/themes/get/default" rel="stylesheet" type="text/css" />
+    <link href="https://www.tfaforms.com/form-builder/4.4.0/css/wforms-jsonly.css?v=469-5" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.10/js/wforms.js?v=469-5"></script>
+    <script type="text/javascript">
+        wFORMS.behaviors.prefill.skip = false;
+    </script>
+        <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.10/js/localization-en_US.js?v=469-5"></script>
+</head>
+<body>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+       <a href=""><img src="Logo.png" /></a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="index.html" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="Guide.html" class="pure-menu-link">HTML Guide</a></li>
+            <li class="pure-menu-item"><a href="" class="pure-menu-link">CSS Guide</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">The HTML Guide</h1>
+        <p class="splash-subhead">
+            Written by Jackson, Source: W3 Schools
+        </p>
+    </div>
+</div>
+ <!-- FORM: BODY SECTION -->   
+<div class="content-wrapper">
+<div class="wFormContainer" style="max-width: 576px; width:auto;" >
+ 
+  <style type="text/css">
+                #tfa_2756,
+                *[id^="tfa_2756["] {
+                    width: 214px !important;
+                }
+                #tfa_2756-D,
+                *[id^="tfa_2756["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+           
+                #tfa_2757,
+                *[id^="tfa_2757["] {
+                    width: 214px !important;
+                }
+                #tfa_2757-D,
+                *[id^="tfa_2757["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+           
+                #tfa_2758,
+                *[id^="tfa_2758["] {
+                    width: 214px !important;
+                }
+                #tfa_2758-D,
+                *[id^="tfa_2758["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+           
+                #tfa_2761,
+                *[id^="tfa_2761["] {
+                    width: 214px !important;
+                }
+                #tfa_2761-D,
+                *[id^="tfa_2761["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+           
+                #tfa_2792,
+                *[id^="tfa_2792["] {
+                    width: 324px !important;
+                }
+                #tfa_2792-D,
+                *[id^="tfa_2792["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+           
+                #tfa_2792-L,
+                label[id^="tfa_2792["] {
+                    width: 131px !important;
+                    min-width: 0px;
+                }
+           
+                #tfa_2792,
+                *[id^="tfa_2792["] {
+                    height: 83px
+                }
+                #tfa_2792-D,
+                *[id^="tfa_2792["][class~="field-container-D"] {
+                    height: auto !important;
+                }
+                #tfa_2792-L,
+                label[id^="tfa_2792["],
+                *[id^="tfa_2792["][id$="-L"] {
+                    height: auto !important;
+                }
+            </style><div class=""><div class="wForm" id="tfa_0-WRPR" dir="ltr">
+<div class="codesection" id="code-tfa_0"><style>
+              .wFormContainer {margin: 0px !important;}
+              .wFormContainer .supportInfo {display: none;}
+              .wFormContainer .wFormTitle {display: none;}
+              .wFormWebPage {margin: 8px 0px};
+              .wForm {padding: 0px !important;}
+              #tfa_0-A {padding: 0px !important; margin:0px 4px;}
+              .wForm input[type="text"], .wForm input[type="password"], .wForm input[type="file"], .wForm textarea, .wForm select {border-radius: 0px;}
+              .wForm div > div.oneField, .wForm fieldset > div.oneField, .wForm form > div.oneField, .wForm fieldset, .wForm .matrixLayout, .wForm .gridLayout, .wForm h4, .wForm .wfPagingButtons, .wForm .actions {margin-top: 0px !important;}
+             
+              .wForm textarea {
+                           border: 1px solid #cccccc;
+                           color: #4c4c4c; font-size: 14px; width: 100% !important;
+                           font-family: Tinos,​Arial,​Helvetica,​sans-serif;
+              }
+              .wForm label, .wForm .label {
+                           color: #4c4c4c; font-size: 14px;
+                           font-family: Tinos,​Arial,​Helvetica,​sans-serif;
+              }
+              .wForm .oneField input {
+                           color: #4c4c4c; font-size: 14px;
+                           font-family: Tinos,​Arial,​Helvetica,​sans-serif;
+                           padding: 0px 5px;
+    /*width: 160px !important;*/
+                           height: 25px !important;
+                           border: 1px solid #cccccc;
+              }
+              #tfa_2843 {
+                           font-size: 14px !important;
+                           font-family: Tinos,​Arial,​Helvetica,​sans-serif !important;
+                           width: 162px !important;
+                           padding: 2px 5px;
+                           border: 1px solid #cccccc;
+              }
+</style>
+</div>
+<ul id="lightboxes">
+    <li id = "lightbox-about">
+    <div class="box">
+
+<h3 class="wFormTitle" id="tfa_0-T">&nbsp;</h3>
+<form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="tfa_0">
+<div class="htmlSection" id="tfa_2793"><div class="htmlContent" id="tfa_2793-HTML"><div style="text-align: left;">Complete this contact form with your comments or feedback</div><div style="text-align: left;">and I will get back to you as soon as possible.</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div></div></div>
+    </div>
+</li>
+<li id="lightbox-more">
+    <div class="box">
+<div id="tfa_2748" class="section group">
+<div id="tfa_2755" class="section inline group">
+<div class="oneField field-container-D    " id="tfa_2756-D">
+<label id="tfa_2756-L" for="tfa_2756" class="label preField reqMark">First Name&nbsp;</label><br><div class="inputWrapper"><input type="text" id="tfa_2756" name="tfa_2756" value="" placeholder="" aria-required="true" title="First Name " class="calc-first required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_2757-D">
+<label id="tfa_2757-L" for="tfa_2757" class="label preField reqMark">Last Name</label><br><div class="inputWrapper"><input type="text" id="tfa_2757" name="tfa_2757" value="" placeholder="" aria-required="true" title="Last Name" class="calc-last required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_2758-D">
+<label id="tfa_2758-L" for="tfa_2758" class="label preField reqMark">Email</label><br><div class="inputWrapper"><input type="text" id="tfa_2758" name="tfa_2758" value="" placeholder="" aria-required="true" title="Email" class="validate-email required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_2761-D">
+<label id="tfa_2761-L" for="tfa_2761" class="label preField ">Mobile Phone</label><br><div class="inputWrapper"><input type="text" id="tfa_2761" name="tfa_2761" value="" placeholder="" title="Mobile Phone" class="validate-integer"></div>
+</div>
+</div>
+<div id="tfa_2760" class="section column group"><div class="oneField field-container-D    " id="tfa_2792-D">
+<label id="tfa_2792-L" for="tfa_2792" class="label preField ">Comments/Feedback:</label><br><div class="inputWrapper"><textarea id="tfa_2792" name="tfa_2792" title="Comments/Feedback:" class=""></textarea></div>
+</div></div>
+</div>
+<div class="actions" id="tfa_0-A">
+<div id="google-captcha" style="display: none">
+<br><div class="captcha">
+<div class="oneField">
+<div class="g-recaptcha" id="g-recaptcha-render-div"></div>
+<div class="g-captcha-error"></div>
+<br>
+</div>
+<div class="captchaHelp">reCAPTCHA helps prevent automated form spam.<br>
+</div>
+<div id="disabled-explanation" class="captchaHelp" style="display: none">The submit button will be disabled until you complete the CAPTCHA.</div>
+</div>
+</div>
+<input type="submit" class="primaryAction" id="submit_button" value="Submit">
+</div>
+<div style="clear:both"></div>
+<input type="hidden" value="4642977" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="5dbc97ce98e64463e718b167d7b87400" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="2" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+</div>
+    </li>
+    </ul>
+</form>
+</div></div>
+ 
+  <p class="supportInfo" >
+        <a href="https://www.tfaforms.com/forms/help/4642977" target="new" style="font-size: 0.7em;">
+      Need assistance with this form?    </a>
+ 
+      </p>
+ 
+    </div>
+</div>
