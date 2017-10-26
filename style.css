@@ -22,4 +22,6 @@ body {
     height: 100px
     width: 100px
     float: center;
+    color: white
+    border: solid 3px black
 }
