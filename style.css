@@ -17,3 +17,6 @@ body {
 	height 800px;
 	border: 2px solid black;
 }
+.boxed {
+    border: 1px solid black;
+}
