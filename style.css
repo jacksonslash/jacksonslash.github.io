@@ -17,6 +17,7 @@ body {
 	height 800px;
 	border: 2px solid black;
 }
-text-box {
-    padding: 10px;
+
+.centeralign {
+    text-align: center
 }
