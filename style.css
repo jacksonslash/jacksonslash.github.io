@@ -11,9 +11,9 @@ body {
 	display: flex;
 	margin-top: 10px;
 }
-.code_box {
+.code-box {
 	border-style: solid;
-    border-color:#287EC7
+    border-color:#287EC7;
 }
 
 .
