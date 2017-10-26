@@ -12,6 +12,7 @@ body {
 	margin-top: 10px;
 }
 .code-box {
+    width: auto;
     border-style: solid;
     border-color: #287EC7;
 }
