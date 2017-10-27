@@ -12,6 +12,7 @@ body {
 	margin-top: 10px;
 }
 .text-box {
+	width: 100px;
 }
 .text {
 	border: 2px solid black;
