@@ -13,10 +13,9 @@ body {
 }
 .text-box {
 	width: 300px;
-	height: 100px;
 }
 	
 .text {
-	position: absolute;
-	top: auto;
+	text-align: center;
+	line-height: 100px;
 }
