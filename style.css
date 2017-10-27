@@ -14,8 +14,8 @@ body {
 .text-box {
 	width: 50%;
 	height: 300px;
-	border: 2px solid black;
 }
 	
 .text {
+	border: 2px solid black;
 }
