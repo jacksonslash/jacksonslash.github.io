@@ -12,8 +12,11 @@ body {
 	margin-top: 10px;
 }
 .text-box {
+	 display: flex;
+	 flex-direction: column;
 }
 .text {
 	width: 400px;
+	flex-grow: 1;
 	border: 2px solid black;
 }
