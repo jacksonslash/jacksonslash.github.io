@@ -12,12 +12,8 @@ body {
 	margin-top: 10px;
 }
 .text-box {
-    	margin: 0;
-	padding: 0;
 	text-align: center;
 }
 .text {
-	margin: 0 auto;
 	border: 2px solid black;
-	width: 100px;
 }
