@@ -12,11 +12,9 @@ body {
 	margin-top: 10px;
 }
 .text-box {
-	 display: flex;
-	 flex-direction: column;
-}
+	width: 50%;
+	height 300px
+	
 .text {
-	width: 400px;
-	flex-grow: 1;
 	border: 2px solid black;
 }
