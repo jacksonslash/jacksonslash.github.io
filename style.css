@@ -12,9 +12,12 @@ body {
 	margin-top: 10px;
 }
 .text-box {
-    	width: 300px;
-	margin: 0 auto;
+    	margin: 0;
+	padding: 0;
+	text-align: center;
 }
 .text {
+	margin: 0 auto;
 	border: 2px solid black;
+	width: 300px;
 }
