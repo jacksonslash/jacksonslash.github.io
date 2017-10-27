@@ -17,4 +17,6 @@ body {
 }
 	
 .text {
+	position: absolute;
+	top: auto;
 }
