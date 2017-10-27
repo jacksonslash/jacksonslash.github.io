@@ -17,5 +17,8 @@ body {
 	background-color: white;
 	font-family: SourceCodePro, ExtraLight;
 }
+.code {
+	border: 2px solid blue;
+}
 
 	
