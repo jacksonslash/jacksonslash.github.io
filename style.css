@@ -14,7 +14,7 @@ body {
 code-box {
 	width: 300px;
 	height: 100px;
-	color: gray;
+	background-color: lightgray;
 	font-family: SourceCodePro, ExtraLight;
 }
 
