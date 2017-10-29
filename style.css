@@ -15,6 +15,7 @@ body {
 	width: 400px;
 	height: 200px;
 	font-family: SourceCodePro, ExtraLight;
+    float: center;
 }
 .code {
 	border: 2px solid blue;
